@@ -37,18 +37,17 @@ export const projects: Project[] = [
 
     order: 1,
 },
-
   {
     id: 2,
 
-    slug: "lunch-roulette",
+    slug: "paint",
 
-    title: "Lunch Roulette",
+    title: "Canvas Paint",
 
-    summary: "점심 메뉴 추천",
+    summary: "Canvas 기반 그림판",
 
     description:
-      "점심 메뉴를 랜덤으로 추천하는 웹 서비스",
+      "Canvas API를 활용한 그림판으로 펜, 형광펜, 지우개, 도형, Undo/Redo 등을 구현한 웹 애플리케이션",
 
     thumbnail: "",
 
@@ -56,23 +55,25 @@ export const projects: Project[] = [
 
     category: "utility",
 
-    techStack: ["React"],
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Canvas API"
+    ],
 
     github: "",
 
     demo: "",
 
-    featured: false,
+    featured: true,
 
-    status: "completed",
+    status: "developing",
 
-    startDate: "2025-12",
-
-    endDate: "2026-01",
+    startDate: "2026-07",
 
     order: 2,
   },
-
   {
     id: 3,
 
