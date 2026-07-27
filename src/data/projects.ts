@@ -77,14 +77,51 @@ export const projects: Project[] = [
   {
     id: 3,
 
-    slug: "canvas-rpg",
+    slug: "coloring",
 
-    title: "Canvas RPG",
+    title: "Coloring",
 
-    summary: "HTML5 Canvas 게임",
+    summary: "브러시와 채우기를 이용한 색칠놀이",
 
     description:
-      "Canvas 기반 RPG 게임 프로젝트",
+      "Canvas 기반 색칠놀이 프로젝트로 브러시와 채우기 기능을 직접 구현한 교육용 콘텐츠",
+
+    thumbnail: "",
+
+    images: [],
+
+    category: "education",
+
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Canvas API"
+    ],
+
+    github: "",
+
+    demo: "/portfolio/coloring",
+
+    featured: true,
+
+    status: "completed",
+
+    startDate: "2026-07",
+
+    order: 3,
+  },
+  {
+    id: 4,
+
+    slug: "wordgame",
+
+    title: "영단어 카드게임",
+
+    summary: "드래그 앤 드롭 영단어 맞추기",
+
+    description:
+        "영어 단어를 카드 드래그 방식으로 맞추는 교육용 게임입니다. 카드 드래그, 드롭 판정, 복귀 애니메이션, 셔플 알고리즘 등을 직접 구현했습니다.",
 
     thumbnail: "",
 
@@ -92,18 +129,22 @@ export const projects: Project[] = [
 
     category: "game",
 
-    techStack: ["TypeScript"],
+    techStack: [
+        "Next.js",
+        "React",
+        "TypeScript"
+    ],
 
     github: "",
 
-    demo: "",
+    demo: "/portfolio/wordgame",
 
-    featured: false,
+    featured: true,
 
     status: "developing",
 
-    startDate: "2026-02",
+    startDate: "2026-07",
 
-    order: 3,
+    order: 4,
   },
 ];

@@ -234,6 +234,8 @@ export default function usePaint() {
   const onPointerDown = (
     event: React.PointerEvent<HTMLCanvasElement>
   ) => {
+    event.preventDefault();
+
     if (!engineRef.current) return;
 
     event.currentTarget.setPointerCapture(
@@ -274,6 +276,8 @@ export default function usePaint() {
   const onPointerMove = (
     event: React.PointerEvent<HTMLCanvasElement>
   ) => {
+    event.preventDefault();
+
     if (!engineRef.current) return;
 
     const point = engineRef.current.getPoint(event);
@@ -315,6 +319,8 @@ export default function usePaint() {
   const onPointerUp = (
     event: React.PointerEvent<HTMLCanvasElement>
   ) => {
+    event.preventDefault();
+    
     if (!engineRef.current) return;
 
     isDrawingRef.current = false;

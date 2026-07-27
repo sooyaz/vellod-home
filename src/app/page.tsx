@@ -6,7 +6,7 @@ import Portfolio from "@/sections/Portfolio";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="min-h-screen bg-[#0B1120] text-white">
       <Navbar />
 
       <main className="pt-20">
@@ -14,6 +14,6 @@ export default function HomePage() {
         <About />
         <Portfolio />
       </main>
-    </>
+    </div>
   );
 }

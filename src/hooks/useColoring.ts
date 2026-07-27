@@ -24,6 +24,7 @@ export default function useColoring(
   const onPointerDown = (
     event: React.PointerEvent<HTMLCanvasElement>
   ) => {
+    event.preventDefault();
 
     if (!engineRef.current) {
       return;
@@ -51,6 +52,8 @@ export default function useColoring(
   const onPointerMove = (
     event: React.PointerEvent<HTMLCanvasElement>
   ) => {
+    event.preventDefault();
+
     if (tool !== "brush") {
       return;
     }
@@ -81,7 +84,11 @@ export default function useColoring(
     lastPoint.current = point;
   };
 
-  const onPointerUp = () => {
+  const onPointerUp = (
+    event: React.PointerEvent<HTMLCanvasElement>
+  ) => {
+    event.preventDefault();
+    
     isDrawing.current = false;
     brushRef.current?.end();
     fillRef.current?.end();

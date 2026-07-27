@@ -20,12 +20,14 @@ export default function PaintCanvas({
 
       <canvas
         ref={paint.canvasRef}
-        className="absolute inset-0 h-full w-full bg-white"
+        className="absolute inset-0 h-full w-full bg-white touch-none"
 
         onPointerDown={paint.onPointerDown}
         onPointerMove={paint.onPointerMove}
         onPointerUp={paint.onPointerUp}
         onPointerLeave={paint.onPointerLeave}
+
+        onPointerCancel={()=>{console.log("CANCEL!!")}}
       />
 
       <canvas

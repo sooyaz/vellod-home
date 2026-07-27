@@ -14,16 +14,18 @@ export default function ColoringCanvas({
   template, tool, color
 }: Props) {
 
-const { canvasRef, engine, onPointerDown, onPointerMove, onPointerUp } = useColoring( template, tool, color );
+const { canvasRef, onPointerDown, onPointerMove, onPointerUp } = useColoring( template, tool, color );
 
   return (
     <canvas
       ref={canvasRef}
       width={900}
       height={900}
+      className="h-full w-full"
       style={{
         border: "1px solid #ddd",
         display: "block",
+        touchAction: "none"
       }}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}

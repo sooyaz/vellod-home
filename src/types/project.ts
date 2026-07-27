@@ -4,7 +4,8 @@ export type ProjectCategory =
   | "utility"
   | "game"
   | "admin"
-  | "ai";
+  | "ai"
+  | "education";
 
 export type ProjectStatus =
   | "completed"

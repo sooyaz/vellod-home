@@ -5,7 +5,6 @@ export default class ColoringCanvasEngine {
   private canvas: HTMLCanvasElement;
   private context: CanvasRenderingContext2D;
   private templateImageData: ImageData | null = null;
-  private canvasImageData: ImageData | null = null;
 
   constructor(
     canvas: HTMLCanvasElement
@@ -142,37 +141,21 @@ export default class ColoringCanvasEngine {
   }
 
   getImageData(): ImageData {
-    if (!this.canvasImageData) {
-        throw new Error(
-            "CanvasImageData가 없습니다."
-        );
-    }
-
-    return new ImageData(
-        new Uint8ClampedArray(
-            this.canvasImageData.data
-        ),
-        this.canvasImageData.width,
-        this.canvasImageData.height
+    return this.context.getImageData(
+      0,
+      0,
+      this.canvas.width,
+      this.canvas.height
     );
   }
 
   putImageData(
     imageData: ImageData
   ) {
-    this.canvasImageData =
-      new ImageData(
-        new Uint8ClampedArray(
-          imageData.data
-        ),
-        imageData.width,
-        imageData.height
-      );
-
     this.context.putImageData(
-      imageData,
-      0,
-      0
+        imageData,
+        0,
+        0
     );
   }
 
@@ -248,15 +231,6 @@ export default class ColoringCanvasEngine {
       );
 
     this.templateImageData =
-      new ImageData(
-        new Uint8ClampedArray(
-          imageData.data
-        ),
-        imageData.width,
-        imageData.height
-      );
-
-    this.canvasImageData =
       new ImageData(
         new Uint8ClampedArray(
           imageData.data
