@@ -24,30 +24,24 @@ export interface ColoringCategory {
 
 }
 export interface ColoringTemplate {
-
   /**
    * 고유 ID
    */
   id: string;
-
   /**
    * 화면 제목
    */
   title: string;
-
   /**
    * 카테고리
    */
   category: string;
-
   /**
    * 도안 이미지
    */
   image: string;
-
   /**
    * 선 색상
    */
   lineColor: string;
-
 }

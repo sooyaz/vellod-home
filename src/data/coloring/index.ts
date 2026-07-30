@@ -1,7 +1,7 @@
 import type { ColoringCategory, ColoringTemplate } from "./types";
 
 import { aTemplates } from "./templates/a";
-// import { bTemplates } from "./templates/b";
+import { bTemplates } from "./templates/b";
 
 export const coloringCategories: ColoringCategory[] = [
   {
@@ -13,14 +13,14 @@ export const coloringCategories: ColoringCategory[] = [
   {
     id: "b",
     title: "B",
-    description: "Bear, Bus ...",
-    thumbnail: "/coloring/templates/b/bear.png",
+    description: "Bus, Bear ...",
+    thumbnail: "/coloring/templates/b/bus.png",
   },
 ];
 
 const templateRepository: Record<string, ColoringTemplate[]> = {
   a: aTemplates,
-  // b: bTemplates,
+  b: bTemplates,
 };
 
 export function getTemplates(category: string): ColoringTemplate[] {

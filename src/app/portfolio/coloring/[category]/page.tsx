@@ -7,13 +7,9 @@ import {
 } from "@/data/coloring";
 
 interface Props {
-
   params: Promise<{
-
     category: string;
-
   }>;
-
 }
 
 export default async function CategoryPage(
@@ -22,19 +18,12 @@ export default async function CategoryPage(
   }: Props
 ) {
 
-  const {
-    category,
-  } = await params;
+  const { category } = await params;
 
-  const templates =
-    getTemplates(category);
+  const templates = getTemplates(category);
 
-  if (
-    templates.length === 0
-  ) {
-
+  if (templates.length === 0) {
     notFound();
-
   }
 
   return (
@@ -68,40 +57,26 @@ export default async function CategoryPage(
           (item) => (
 
             <Link
-
               key={item.id}
-
               href={`/portfolio/coloring/play/${item.id}`}
-
             >
 
               <Image
-
                 src={item.image}
-
                 alt={item.title}
-
                 width={220}
-
                 height={220}
-
               />
 
               <h3>
-
                 {item.title}
 
               </h3>
-
             </Link>
-
           )
         )}
 
       </div>
-
     </main>
-
   );
-
 }
